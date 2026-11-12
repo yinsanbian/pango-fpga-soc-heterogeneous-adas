@@ -1,0 +1,19 @@
+{
+  "_note": "模板。当前 rk_deploy/app/yolo_sender.py 用 CLI 参数；板端部署脚本可读取本文件映射到对应参数。",
+  "host": "192.168.1.100",
+  "port": 7000,
+  "backend": "rknn",
+  "model": "rk_deploy/model/traffic9_split6_640.rknn",
+  "onnx": "traffic_yolo_deploy/deploy_rk3568/models/traffic9_split6_640.onnx",
+  "video": "/dev/video0",
+  "layout": "single",
+  "calib": "dashboard/avm3d/calib/sim_calibration.json",
+  "cell": "front",
+  "fps": 20.0,
+  "imgsz": 640,
+  "conf": 0.30,
+  "iou": 0.45,
+  "max_det": 60,
+  "source_id": "RK3568",
+  "clock_domain_id": 2
+}

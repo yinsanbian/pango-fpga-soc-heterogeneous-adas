@@ -1,0 +1,675 @@
+domain,signal,package_pin,io_standard,bank,note,source
+clock,FPGA_GCLK_50M,P20,LVCMOS33,1,系统时钟 50MHz 单端有源晶振(U9)；例程端口名 sys_clk，create_clock -period 20.000,manual1v1_p9
+clock,FPGA_GCLK_27M,K21,LVCMOS33,1,27MHz 单端有源晶振(U13)；例程未使用,manual1v1_p9
+clock,HSST_CLK_P,A10,差分,HSST,125MHz 有源差分晶振(U7)，HSST 参考时钟 P 端。V1.0 手册写作 `HSST_CLK_PA10`（粘连），1V1 手册改为 `HSST_CLK_P A10` —— **同一引脚，已由新版证实**,manual1v1_p9
+clock,HSST_CLK_N,B10,差分,HSST,125MHz 有源差分晶振(U7)，HSST 参考时钟 N 端（V1.0 写作 `HSST_CLK_NB10`）,manual1v1_p9
+ddr3,ddr3_addr[0],N6,HSTL15_I,3,1.5V 固定；例程端口名 mem_a[0],manual1v1_p11-12
+ddr3,ddr3_addr[1],R4,HSTL15_I,3,1.5V 固定；例程端口名 mem_a[1],manual1v1_p11-12
+ddr3,ddr3_addr[2],P6,HSTL15_I,3,1.5V 固定；例程端口名 mem_a[2],manual1v1_p11-12
+ddr3,ddr3_addr[3],F3,HSTL15_I,3,1.5V 固定；例程端口名 mem_a[3],manual1v1_p11-12
+ddr3,ddr3_addr[4],V5,HSTL15_I,3,1.5V 固定；例程端口名 mem_a[4],manual1v1_p11-12
+ddr3,ddr3_addr[5],E4,HSTL15_I,3,1.5V 固定；例程端口名 mem_a[5],manual1v1_p11-12
+ddr3,ddr3_addr[6],V3,HSTL15_I,3,1.5V 固定；例程端口名 mem_a[6],manual1v1_p11-12
+ddr3,ddr3_addr[7],D2,HSTL15_I,3,1.5V 固定；例程端口名 mem_a[7],manual1v1_p11-12
+ddr3,ddr3_addr[8],U4,HSTL15_I,3,1.5V 固定；例程端口名 mem_a[8],manual1v1_p11-12
+ddr3,ddr3_addr[9],P5,HSTL15_I,3,1.5V 固定；例程端口名 mem_a[9],manual1v1_p11-12
+ddr3,ddr3_addr[10],P8,HSTL15_I,3,1.5V 固定；例程端口名 mem_a[10],manual1v1_p11-12
+ddr3,ddr3_addr[11],T4,HSTL15_I,3,1.5V 固定；例程端口名 mem_a[11],manual1v1_p11-12
+ddr3,ddr3_addr[12],P7,HSTL15_I,3,1.5V 固定；例程端口名 mem_a[12],manual1v1_p11-12
+ddr3,ddr3_addr[13],P4,HSTL15_I,3,1.5V 固定；例程端口名 mem_a[13],manual1v1_p11-12
+ddr3,ddr3_addr[14],T3,HSTL15_I,3,1.5V 固定；例程端口名 mem_a[14],manual1v1_p11-12
+ddr3,ddr3_ba[0],F5,HSTL15_I,3,1.5V 固定；例程端口名 mem_ba[0],manual1v1_p11-12
+ddr3,ddr3_ba[1],W4,HSTL15_I,3,1.5V 固定；例程端口名 mem_ba[1],manual1v1_p11-12
+ddr3,ddr3_ba[2],N7,HSTL15_I,3,1.5V 固定；例程端口名 mem_ba[2],manual1v1_p11-12
+ddr3,ddr3_cas_n,H8,HSTL15_I,3,1.5V 固定；例程端口名 mem_cas_n,manual1v1_p11-12
+ddr3,ddr3_ck_n,T5,HSTL15D_I,3,1.5V 固定；例程端口名 mem_ck_n,manual1v1_p11-12
+ddr3,ddr3_ck_p,T6,HSTL15D_I,3,1.5V 固定；例程端口名 mem_ck,manual1v1_p11-12
+ddr3,ddr3_cke,Y3,HSTL15_I,3,1.5V 固定；例程端口名 mem_cke,manual1v1_p11-12
+ddr3,ddr3_cs_n,G6,HSTL15_I,3,1.5V 固定；例程端口名 mem_cs_n,manual1v1_p11-12
+ddr3,ddr3_odt,G7,HSTL15_I,3,1.5V 固定；例程端口名 mem_odt,manual1v1_p11-12
+ddr3,ddr3_ras_n,J7,HSTL15_I,3,1.5V 固定；例程端口名 mem_ras_n,manual1v1_p11-12
+ddr3,ddr3_reset_n,C1,HSTL15_I,3,1.5V 固定；例程端口名 mem_rst_n,manual1v1_p11-12
+ddr3,ddr3_we_n,H6,HSTL15_I,3,1.5V 固定；例程端口名 mem_we_n,manual1v1_p11-12
+ddr3,ddr3_dm[0],W3,HSTL15_I,3,1.5V 固定；例程端口名 mem_dm[0] ；字节组 0（dq0-7 ↔ dm0/dqs0）,manual1v1_p11-12
+ddr3,ddr3_dm[1],L1,HSTL15_I,3,1.5V 固定；例程端口名 mem_dm[1] ；字节组 0（dq0-7 ↔ dm0/dqs0）,manual1v1_p11-12
+ddr3,ddr3_dm[2],K2,HSTL15_I,3,1.5V 固定；例程端口名 mem_dm[2] ；字节组 0（dq0-7 ↔ dm0/dqs0）,manual1v1_p11-12
+ddr3,ddr3_dm[3],G1,HSTL15_I,3,1.5V 固定；例程端口名 mem_dm[3] ；字节组 0（dq0-7 ↔ dm0/dqs0）,manual1v1_p11-12
+ddr3,ddr3_dq[0],U1,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[0] ；字节组 0（dq0-7 ↔ dm0/dqs0）,manual1v1_p11-12
+ddr3,ddr3_dq[1],U3,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[1] ；字节组 0（dq0-7 ↔ dm0/dqs0）,manual1v1_p11-12
+ddr3,ddr3_dq[2],T2,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[2] ；字节组 0（dq0-7 ↔ dm0/dqs0）,manual1v1_p11-12
+ddr3,ddr3_dq[3],Y2,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[3] ；字节组 0（dq0-7 ↔ dm0/dqs0）,manual1v1_p11-12
+ddr3,ddr3_dq[4],T1,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[4] ；字节组 0（dq0-7 ↔ dm0/dqs0）,manual1v1_p11-12
+ddr3,ddr3_dq[5],Y1,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[5] ；字节组 0（dq0-7 ↔ dm0/dqs0）,manual1v1_p11-12
+ddr3,ddr3_dq[6],M7,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[6] ；字节组 0（dq0-7 ↔ dm0/dqs0）,manual1v1_p11-12
+ddr3,ddr3_dq[7],W1,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[7] ；字节组 0（dq0-7 ↔ dm0/dqs0）,manual1v1_p11-12
+ddr3,ddr3_dq[8],P1,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[8] ；字节组 1（dq8-15 ↔ dm1/dqs1）,manual1v1_p11-12
+ddr3,ddr3_dq[9],M2,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[9] ；字节组 1（dq8-15 ↔ dm1/dqs1）,manual1v1_p11-12
+ddr3,ddr3_dq[10],R1,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[10] ；字节组 1（dq8-15 ↔ dm1/dqs1）,manual1v1_p11-12
+ddr3,ddr3_dq[11],M1,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[11] ；字节组 1（dq8-15 ↔ dm1/dqs1）,manual1v1_p11-12
+ddr3,ddr3_dq[12],P2,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[12] ；字节组 1（dq8-15 ↔ dm1/dqs1）,manual1v1_p11-12
+ddr3,ddr3_dq[13],L3,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[13] ；字节组 1（dq8-15 ↔ dm1/dqs1）,manual1v1_p11-12
+ddr3,ddr3_dq[14],P3,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[14] ；字节组 1（dq8-15 ↔ dm1/dqs1）,manual1v1_p11-12
+ddr3,ddr3_dq[15],N4,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[15] ；字节组 1（dq8-15 ↔ dm1/dqs1）,manual1v1_p11-12
+ddr3,ddr3_dq[16],K4,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[16] ；字节组 2（dq16-23 ↔ dm2/dqs2）,manual1v1_p11-12
+ddr3,ddr3_dq[17],K1,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[17] ；字节组 2（dq16-23 ↔ dm2/dqs2）,manual1v1_p11-12
+ddr3,ddr3_dq[18],J3,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[18] ；字节组 2（dq16-23 ↔ dm2/dqs2）,manual1v1_p11-12
+ddr3,ddr3_dq[19],L4,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[19] ；字节组 2（dq16-23 ↔ dm2/dqs2）,manual1v1_p11-12
+ddr3,ddr3_dq[20],K3,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[20] ；字节组 2（dq16-23 ↔ dm2/dqs2）,manual1v1_p11-12
+ddr3,ddr3_dq[21],M3,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[21] ；字节组 2（dq16-23 ↔ dm2/dqs2）,manual1v1_p11-12
+ddr3,ddr3_dq[22],J1,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[22] ；字节组 2（dq16-23 ↔ dm2/dqs2）,manual1v1_p11-12
+ddr3,ddr3_dq[23],M4,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[23] ；字节组 2（dq16-23 ↔ dm2/dqs2）,manual1v1_p11-12
+ddr3,ddr3_dq[24],J6,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[24] ；字节组 3（dq24-31 ↔ dm3/dqs3）,manual1v1_p11-12
+ddr3,ddr3_dq[25],F1,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[25] ；字节组 3（dq24-31 ↔ dm3/dqs3）,manual1v1_p11-12
+ddr3,ddr3_dq[26],K7,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[26] ；字节组 3（dq24-31 ↔ dm3/dqs3）,manual1v1_p11-12
+ddr3,ddr3_dq[27],F2,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[27] ；字节组 3（dq24-31 ↔ dm3/dqs3）,manual1v1_p11-12
+ddr3,ddr3_dq[28],H5,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[28] ；字节组 3（dq24-31 ↔ dm3/dqs3）,manual1v1_p11-12
+ddr3,ddr3_dq[29],H3,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[29] ；字节组 3（dq24-31 ↔ dm3/dqs3）,manual1v1_p11-12
+ddr3,ddr3_dq[30],J4,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[30] ；字节组 3（dq24-31 ↔ dm3/dqs3）,manual1v1_p11-12
+ddr3,ddr3_dq[31],G3,HSTL15_I,3,1.5V 固定；例程端口名 mem_dq[31] ；字节组 3（dq24-31 ↔ dm3/dqs3）,manual1v1_p11-12
+ddr3,ddr3_dqs_p[0],V2,HSTL15D_I,3,1.5V 固定；例程端口名 mem_dqs[0] ；字节组 0（dq0-7 ↔ dm0/dqs0）,manual1v1_p11-12
+ddr3,ddr3_dqs_n[0],V1,HSTL15D_I,3,1.5V 固定；例程端口名 mem_dqs_n[0] ；字节组 0（dq0-7 ↔ dm0/dqs0）,manual1v1_p11-12
+ddr3,ddr3_dqs_p[1],N3,HSTL15D_I,3,1.5V 固定；例程端口名 mem_dqs[1] ；字节组 0（dq0-7 ↔ dm0/dqs0）,manual1v1_p11-12
+ddr3,ddr3_dqs_n[1],N1,HSTL15D_I,3,1.5V 固定；例程端口名 mem_dqs_n[1] ；字节组 0（dq0-7 ↔ dm0/dqs0）,manual1v1_p11-12
+ddr3,ddr3_dqs_p[2],M6,HSTL15D_I,3,1.5V 固定；例程端口名 mem_dqs[2] ；字节组 0（dq0-7 ↔ dm0/dqs0）,manual1v1_p11-12
+ddr3,ddr3_dqs_n[2],L6,HSTL15D_I,3,1.5V 固定；例程端口名 mem_dqs_n[2] ；字节组 0（dq0-7 ↔ dm0/dqs0）,manual1v1_p11-12
+ddr3,ddr3_dqs_p[3],E3,HSTL15D_I,3,1.5V 固定；例程端口名 mem_dqs[3] ；字节组 0（dq0-7 ↔ dm0/dqs0）,manual1v1_p11-12
+ddr3,ddr3_dqs_n[3],E1,HSTL15D_I,3,1.5V 固定；例程端口名 mem_dqs_n[3] ；字节组 0（dq0-7 ↔ dm0/dqs0）,manual1v1_p11-12
+flash_qspi,CS,AA3,LVCMOS33,1,片选；QSPI 器件管脚 1（V1.0 原文两列粘连为 AA31，1V1 已改为 `AA3 1` 空格分隔，两版一致）,manual1v1_p13
+flash_qspi,DQ0,AB20,LVCMOS33,1,数据位0；QSPI 器件管脚 5（V1.0 原文两列粘连为 AB205，1V1 已改为 `AB20 5` 空格分隔，两版一致）,manual1v1_p13
+flash_qspi,DQ1,AA20,LVCMOS33,1,数据位1；QSPI 器件管脚 2（V1.0 原文两列粘连为 AA202，1V1 已改为 `AA20 2` 空格分隔，两版一致）,manual1v1_p13
+flash_qspi,DQ2,R13,LVCMOS33,1,数据位2；QSPI 器件管脚 3（V1.0 原文两列粘连为 R133，1V1 已改为 `R13 3` 空格分隔，两版一致）,manual1v1_p13
+flash_qspi,DQ3,T14,LVCMOS33,1,数据位3；QSPI 器件管脚 7（V1.0 原文两列粘连为 T147，1V1 已改为 `T14 7` 空格分隔，两版一致）,manual1v1_p13
+flash_qspi,SCK,Y20,LVCMOS33,1,串行数据时钟；QSPI 器件管脚 6（V1.0 原文两列粘连为 Y206，1V1 已改为 `Y20 6` 空格分隔，两版一致）,manual1v1_p13
+eth1,RX_CLK,F14,LVCMOS33,1,接收时钟线；RTL8211 Pin 40；RGMII,manual1v1_p23
+eth1,RX_CTRL,F9,LVCMOS33,1,接收控制线；RTL8211 Pin 37；RGMII,manual1v1_p23
+eth1,RXD[3],H13,LVCMOS33,1,RTL8211 Pin 38；RGMII,manual1v1_p23
+eth1,RXD[2],G13,LVCMOS33,1,RTL8211 Pin 39；RGMII,manual1v1_p23
+eth1,RXD[1],H11,LVCMOS33,1,RTL8211 Pin 41；RGMII,manual1v1_p23
+eth1,RXD[0],H10,LVCMOS33,1,RTL8211 Pin 42；RGMII,manual1v1_p23
+eth1,TX_CLK,G16,LVCMOS33,1,发送时钟线；RTL8211 Pin 47；RGMII,manual1v1_p23
+eth1,TX_CTRL,B18,LVCMOS33,1,发送控制线；RTL8211 Pin 2；RGMII,manual1v1_p23
+eth1,TXD[3],A18,LVCMOS33,1,RTL8211 Pin 44；RGMII,manual1v1_p23
+eth1,TXD[2],C18,LVCMOS33,1,RTL8211 Pin 45；RGMII,manual1v1_p23
+eth1,TXD[1],D17,LVCMOS33,1,RTL8211 Pin 48；RGMII,manual1v1_p23
+eth1,TXD[0],F17,LVCMOS33,1,RTL8211 Pin 1；RGMII,manual1v1_p23
+eth1,MDC,A20,LVCMOS33,1,控制总线时钟；RTL8211 Pin 5；RGMII,manual1v1_p23
+eth1,MDIO,C19,LVCMOS33,1,控制总线数据；RTL8211 Pin 4；RGMII,manual1v1_p23
+eth1,RSTN,B20,LVCMOS33,1,复位控制线，低有效；RTL8211 Pin 29；RGMII,manual1v1_p23
+eth2,RX_CLK,M19,LVCMOS33,1,接收时钟线；RTL8211 Pin 40；RGMII,manual1v1_p24
+eth2,RX_CTRL,B21,LVCMOS33,1,接收控制线；RTL8211 Pin 37；RGMII,manual1v1_p24
+eth2,RXD[3],F18,LVCMOS33,1,RTL8211 Pin 38；RGMII,manual1v1_p24
+eth2,RXD[2],D22,LVCMOS33,1,RTL8211 Pin 39；RGMII,manual1v1_p24
+eth2,RXD[1],D21,LVCMOS33,1,RTL8211 Pin 41；RGMII,manual1v1_p24
+eth2,RXD[0],B22,LVCMOS33,1,RTL8211 Pin 42；RGMII,manual1v1_p24
+eth2,TX_CLK,C20,LVCMOS33,1,发送时钟线；RTL8211 Pin 47；RGMII,manual1v1_p24
+eth2,TX_CTRL,F22,LVCMOS33,1,发送控制线；RTL8211 Pin 2；RGMII,manual1v1_p24
+eth2,TXD[3],F21,LVCMOS33,1,RTL8211 Pin 44；RGMII,manual1v1_p24
+eth2,TXD[2],E22,LVCMOS33,1,RTL8211 Pin 45；RGMII,manual1v1_p24
+eth2,TXD[1],E20,LVCMOS33,1,RTL8211 Pin 48；RGMII,manual1v1_p24
+eth2,TXD[0],C22,LVCMOS33,1,RTL8211 Pin 1；RGMII,manual1v1_p24
+eth2,MDC,G20,LVCMOS33,1,控制总线时钟；RTL8211 Pin 5；RGMII,manual1v1_p24
+eth2,MDIO,G22,LVCMOS33,1,控制总线数据；RTL8211 Pin 4；RGMII,manual1v1_p24
+eth2,RSTN,F19,LVCMOS33,1,复位控制线，低有效；RTL8211 Pin 29；RGMII,manual1v1_p24
+sfp,SFP0_TX_P,B14,差分,HSST,HSST 通道 MGT_TX2_P（手册原文 `MGT_TX2_PB14` = 网络名 MGT_TX2_P + 引脚 B14）；经隔直电容,manual1v1_p24-26
+sfp,SFP0_TX_N,A14,差分,HSST,HSST 通道 MGT_TX2_N（手册原文 `MGT_TX2_NA14` = 网络名 MGT_TX2_N + 引脚 A14）；经隔直电容,manual1v1_p24-26
+sfp,SFP0_RX_P,D13,差分,HSST,HSST 通道 MGT_RX2_P（手册原文 `MGT_RX2_PD13` = 网络名 MGT_RX2_P + 引脚 D13）；经隔直电容,manual1v1_p24-26
+sfp,SFP0_RX_N,C13,差分,HSST,HSST 通道 MGT_RX2_N（手册原文 `MGT_RX2_NC13` = 网络名 MGT_RX2_N + 引脚 C13）；经隔直电容,manual1v1_p24-26
+sfp,SFP0_LOS,E16,LVCMOS33,1,光模块接收 Loss，高=无光信号；,manual1v1_p24-26
+sfp,SFP0_SCL,G15,LVCMOS33,1,光模块 I2C 时钟；,manual1v1_p24-26
+sfp,SFP0_SDA,H14,LVCMOS33,1,光模块 I2C 数据；,manual1v1_p24-26
+sfp,SFP0_TX_DIS,H12,LVCMOS33,1,光发射禁止，高有效；原文写作 SPF0_TX_DIS，应为 SFP,manual1v1_p24-26
+sfp,SFP1_TX_P,B16,差分,HSST,HSST 通道 MGT_TX3_P（手册原文 `MGT_TX3_PB16` = 网络名 MGT_TX3_P + 引脚 B16）；经隔直电容,manual1v1_p24-26
+sfp,SFP1_TX_N,A16,差分,HSST,HSST 通道 MGT_TX3_N（手册原文 `MGT_TX3_NA16` = 网络名 MGT_TX3_N + 引脚 A16）；经隔直电容,manual1v1_p24-26
+sfp,SFP1_RX_P,D15,差分,HSST,HSST 通道 MGT_RX3_P（手册原文 `MGT_RX3_PD15` = 网络名 MGT_RX3_P + 引脚 D15）；经隔直电容,manual1v1_p24-26
+sfp,SFP1_RX_N,C15,差分,HSST,HSST 通道 MGT_RX3_N（手册原文 `MGT_RX3_NC15` = 网络名 MGT_RX3_N + 引脚 C15）；经隔直电容,manual1v1_p24-26
+sfp,SFP1_LOS,D18,LVCMOS33,1,光模块接收 Loss，高=无光信号；,manual1v1_p24-26
+sfp,SFP1_SCL,C17,LVCMOS33,1,光模块 I2C 时钟；,manual1v1_p24-26
+sfp,SFP1_SDA,A17,LVCMOS33,1,光模块 I2C 数据；,manual1v1_p24-26
+sfp,SFP1_TX_DIS,F16,LVCMOS33,1,光发射禁止，高有效；原文写作 SPF1_TX_DIS，应为 SFP,manual1v1_p24-26
+pcie,PCIE_TX0P,B6,差分,HSST,HSST 通道 MGT_TX0_P（与 SFP0_TX 同一对引脚）,manual1v1_p26-27
+pcie,PCIE_TX0N,A6,差分,HSST,HSST 通道 MGT_TX0_N（与 SFP0_TX 同一对引脚）,manual1v1_p26-27
+pcie,PCIE_TX1P,B8,差分,HSST,HSST 通道 MGT_TX1_P（与 SFP1_TX 同一对引脚）,manual1v1_p26-27
+pcie,PCIE_TX1N,A8,差分,HSST,HSST 通道 MGT_TX1_N（与 SFP1_TX 同一对引脚）,manual1v1_p26-27
+pcie,PCIE_RX0P,D7,差分,HSST,HSST 通道 MGT_RX0_P（与 SFP0_RX 同一对引脚）,manual1v1_p26-27
+pcie,PCIE_RX0N,C7,差分,HSST,HSST 通道 MGT_RX0_N（与 SFP0_RX 同一对引脚）,manual1v1_p26-27
+pcie,PCIE_RX1P,D9,差分,HSST,HSST 通道 MGT_RX1_P（与 SFP1_RX 同一对引脚）,manual1v1_p26-27
+pcie,PCIE_RX1N,C9,差分,HSST,HSST 通道 MGT_RX1_N（与 SFP1_RX 同一对引脚）,manual1v1_p26-27
+pcie,PCIE_refclk_MAIN,A12,差分,HSST,由 PC 的 PCIe 插槽提供，100MHz，AC 耦合；手册表3-3 记为 MGT_CLK_P + A12，表3-4 记为 PCIE_refclk_P + A12 —— **同一引脚**。⚠️ 哪一路是 MAIN 属推断，需实测确认,manual1v1_p26-27
+pcie,PCIE_refclk_AUX,B12,差分,HSST,手册表3-3 记为 MGT_CLK_N + B12，表3-4 记为 PCIE_refclk_N + B12 —— **同一引脚**。⚠️ 哪一路是 AUX 属推断，需实测确认,manual1v1_p26-27
+pcie,PCIE_PERST,A19,LVCMOS33,1,,manual1v1_p26-27
+pcie,PCIE_WAKE,D19,LVCMOS33,1,,manual1v1_p26-27
+uart,UART0_TX,R9,LVCMOS33,1,CP2102 USB-UART，数据输出；USB TypeC,manual1v1_p27
+uart,UART0_RX,R8,LVCMOS33,1,CP2102 USB-UART，数据输入,manual1v1_p27
+hdmi_rx,HD_RX_PCLK,AA12,LVCMOS33,2,MS7200 HDMI 接收；像素时钟,manual1v1_p29-30
+hdmi_rx,HD_RX_VS,W13,LVCMOS33,2,MS7200 HDMI 接收；帧同步,manual1v1_p29-30
+hdmi_rx,HD_RX_HS,V13,LVCMOS33,2,MS7200 HDMI 接收；行同步,manual1v1_p29-30
+hdmi_rx,HD_RX_DE,U13,LVCMOS33,2,MS7200 HDMI 接收；有效像素使能,manual1v1_p29-30
+hdmi_rx,HD_RX_D0,U14,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[0],manual1v1_p29-30
+hdmi_rx,HD_RX_D1,U15,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[1],manual1v1_p29-30
+hdmi_rx,HD_RX_D2,T15,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[2],manual1v1_p29-30
+hdmi_rx,HD_RX_D3,W15,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[3],manual1v1_p29-30
+hdmi_rx,HD_RX_D4,Y16,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[4],manual1v1_p29-30
+hdmi_rx,HD_RX_D5,AB16,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[5],manual1v1_p29-30
+hdmi_rx,HD_RX_D6,AA16,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[6],manual1v1_p29-30
+hdmi_rx,HD_RX_D7,AB17,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[7],manual1v1_p29-30
+hdmi_rx,HD_RX_D8,Y17,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[8],manual1v1_p29-30
+hdmi_rx,HD_RX_D9,V17,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[9],manual1v1_p29-30
+hdmi_rx,HD_RX_D10,W18,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[10],manual1v1_p29-30
+hdmi_rx,HD_RX_D11,AB19,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[11],manual1v1_p29-30
+hdmi_rx,HD_RX_D12,AA18,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[12],manual1v1_p29-30
+hdmi_rx,HD_RX_D13,AB18,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[13],manual1v1_p29-30
+hdmi_rx,HD_RX_D14,Y18,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[14],manual1v1_p29-30
+hdmi_rx,HD_RX_D15,W17,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[15],manual1v1_p29-30
+hdmi_rx,HD_RX_D16,Y15,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[16],manual1v1_p29-30
+hdmi_rx,HD_RX_D17,AB15,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[17],manual1v1_p29-30
+hdmi_rx,HD_RX_D18,U16,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[18],manual1v1_p29-30
+hdmi_rx,HD_RX_D19,V15,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[19],manual1v1_p29-30
+hdmi_rx,HD_RX_D20,AA14,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[20],manual1v1_p29-30
+hdmi_rx,HD_RX_D21,AB14,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[21],manual1v1_p29-30
+hdmi_rx,HD_RX_D22,W14,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[22],manual1v1_p29-30
+hdmi_rx,HD_RX_D23,Y14,LVCMOS33,2,MS7200 HDMI 接收；像素数据位[23],manual1v1_p29-30
+hdmi_rx,HD_SCL,V19,LVCMOS33,2,MS7200 HDMI 接收；MS7200 I2C 时钟,manual1v1_p29-30
+hdmi_rx,HD_SDA,V20,LVCMOS33,2,MS7200 HDMI 接收；MS7200 I2C 数据,manual1v1_p29-30
+hdmi_rx,HD_RX_SC_MC,T18,LVCMOS33,2,MS7200 HDMI 接收；音频 I2S 串行时钟,manual1v1_p29-30
+hdmi_rx,HD_RX_MU_MC,W22,LVCMOS33,2,MS7200 HDMI 接收；音频 I2S 主时钟或 Mute,manual1v1_p29-30
+hdmi_rx,HD_RX_I2S1,R16,LVCMOS33,2,MS7200 HDMI 接收；音频 I2S 数据通道1,manual1v1_p29-30
+hdmi_rx,HD_RX_I2S0,R15,LVCMOS33,2,MS7200 HDMI 接收；音频 I2S 数据通道0,manual1v1_p29-30
+hdmi_rx,HD_RX_WS_SP,T19,LVCMOS33,2,MS7200 HDMI 接收；音频 I2S 位时钟,manual1v1_p29-30
+hdmi_rx,HD_RX_RSTN,R17,LVCMOS33,2,MS7200 HDMI 接收；MS7200 硬件复位，低有效；⚠️ 与 HD_TX_RSTN 同为 R17（硬件共用一个复位网络）,manual1v1_p29-30
+hdmi_rx,HD_RX_INT,T17,LVCMOS33,2,MS7200 HDMI 接收；MS7200 中断输出,manual1v1_p29-30
+hdmi_tx,HD_TX_PCLK,M22,LVCMOS33,2,MS7210 HDMI 发送；像素时钟,manual1v1_p31-32
+hdmi_tx,HD_TX_VS,W20,LVCMOS33,2,MS7210 HDMI 发送；帧同步,manual1v1_p31-32
+hdmi_tx,HD_TX_HS,Y21,LVCMOS33,2,MS7210 HDMI 发送；行同步,manual1v1_p31-32
+hdmi_tx,HD_TX_DE,Y22,LVCMOS33,2,MS7210 HDMI 发送；有效像素使能,manual1v1_p31-32
+hdmi_tx,HD_TX_D0,V21,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[0],manual1v1_p31-32
+hdmi_tx,HD_TX_D1,V22,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[1],manual1v1_p31-32
+hdmi_tx,HD_TX_D2,T21,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[2],manual1v1_p31-32
+hdmi_tx,HD_TX_D3,T22,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[3],manual1v1_p31-32
+hdmi_tx,HD_TX_D4,R20,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[4],manual1v1_p31-32
+hdmi_tx,HD_TX_D5,R22,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[5],manual1v1_p31-32
+hdmi_tx,HD_TX_D6,R19,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[6],manual1v1_p31-32
+hdmi_tx,HD_TX_D7,P19,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[7],manual1v1_p31-32
+hdmi_tx,HD_TX_D8,M21,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[8],manual1v1_p31-32
+hdmi_tx,HD_TX_D9,M17,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[9],manual1v1_p31-32
+hdmi_tx,HD_TX_D10,M18,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[10],manual1v1_p31-32
+hdmi_tx,HD_TX_D11,M16,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[11],manual1v1_p31-32
+hdmi_tx,HD_TX_D12,N15,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[12],manual1v1_p31-32
+hdmi_tx,HD_TX_D13,L19,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[13],manual1v1_p31-32
+hdmi_tx,HD_TX_D14,K20,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[14],manual1v1_p31-32
+hdmi_tx,HD_TX_D15,L17,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[15],manual1v1_p31-32
+hdmi_tx,HD_TX_D16,K17,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[16],manual1v1_p31-32
+hdmi_tx,HD_TX_D17,N19,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[17],manual1v1_p31-32
+hdmi_tx,HD_TX_D18,J22,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[18],manual1v1_p31-32
+hdmi_tx,HD_TX_D19,J20,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[19],manual1v1_p31-32
+hdmi_tx,HD_TX_D20,K22,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[20],manual1v1_p31-32
+hdmi_tx,HD_TX_D21,H21,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[21],manual1v1_p31-32
+hdmi_tx,HD_TX_D22,H22,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[22],manual1v1_p31-32
+hdmi_tx,HD_TX_D23,H19,LVCMOS33,2,MS7210 HDMI 发送；像素数据位[23],manual1v1_p31-32
+hdmi_tx,HDMI_TX_SCL,P17,LVCMOS33,2,MS7210 HDMI 发送；MS7210 I2C 时钟；I2C 从地址 0xB2（SA 上拉）,manual1v1_p31-32
+hdmi_tx,HDMI_TX_SDA,P18,LVCMOS33,2,MS7210 HDMI 发送；MS7210 I2C 数据,manual1v1_p31-32
+hdmi_tx,HD_TX_SC_MC,W22,LVCMOS33,2,MS7210 HDMI 发送；音频 I2S 时钟,manual1v1_p31-32
+hdmi_tx,HD_TX_I2S1,P21,LVCMOS33,2,MS7210 HDMI 发送；音频 I2S 数据通道1,manual1v1_p31-32
+hdmi_tx,HD_TX_I2S0,U22,LVCMOS33,2,MS7210 HDMI 发送；音频 I2S 数据通道0,manual1v1_p31-32
+hdmi_tx,HD_TX_WS,U19,LVCMOS33,2,MS7210 HDMI 发送；音频 I2S 位时钟,manual1v1_p31-32
+hdmi_tx,HD_TX_RSTN,R17,LVCMOS33,2,MS7210 HDMI 发送；MS7210 硬件复位，低有效；⚠️ 与 HD_RX_RSTN 同为 R17,manual1v1_p31-32
+hdmi_tx,HD_TX_INT,U20,LVCMOS33,2,MS7210 HDMI 发送；MS7210 中断输出,manual1v1_p31-32
+hdmi_rx,HD_SCL,V19,LVCMOS33,2,MS7200 I2C 时钟；I2C 从地址 0x56（SA 下拉）,manual1v1_p29-30
+key,KEY1,K18,LVCMOS33,0,用户按键，低电平有效（按下为低）,manual1v1_p33
+key,KEY2,L15,LVCMOS33,0,用户按键，低电平有效（按下为低）,manual1v1_p33
+key,KEY3,J17,LVCMOS33,0,用户按键，低电平有效（按下为低）,manual1v1_p33
+key,KEY4,K16,LVCMOS33,0,用户按键，低电平有效（按下为低）,manual1v1_p33
+key,KEY5,J16,LVCMOS33,0,用户按键，低电平有效（按下为低）,manual1v1_p33
+key,KEY6,J19,LVCMOS33,0,用户按键，低电平有效（按下为低）,manual1v1_p33
+key,KEY7,H20,LVCMOS33,0,用户按键，低电平有效（按下为低）,manual1v1_p33
+key,KEY8,H17,LVCMOS33,0,用户按键，低电平有效（按下为低）,manual1v1_p33
+key,REST,-,LVCMOS33,0,重加载固件按键，经延时复位芯片接到 PGL50H 的 RSTN 管脚（**非普通 IO，无引脚号**）,manual1v1_p33
+led,LED1,B2,LVCMOS33,0,用户 LED，FPGA 输出高电平点亮,manual1v1_p33
+led,LED2,A2,LVCMOS33,0,用户 LED，FPGA 输出高电平点亮,manual1v1_p33
+led,LED3,B3,LVCMOS33,0,用户 LED，FPGA 输出高电平点亮,manual1v1_p33
+led,LED4,A3,LVCMOS33,0,用户 LED，FPGA 输出高电平点亮,manual1v1_p33
+led,LED5,C5,LVCMOS33,0,用户 LED，FPGA 输出高电平点亮,manual1v1_p33
+led,LED6,A5,LVCMOS33,0,用户 LED，FPGA 输出高电平点亮,manual1v1_p33
+led,LED7,F7,LVCMOS33,0,用户 LED，FPGA 输出高电平点亮,manual1v1_p33
+led,LED8,F8,LVCMOS33,0,用户 LED，FPGA 输出高电平点亮,manual1v1_p33
+eeprom,IIC_SCL,F15,LVCMOS33,2,24LC02（2Kbit）IIC 时钟,manual1v1_p34
+eeprom,IIC_SDA,G8,LVCMOS33,2,24LC02 IIC 数据,manual1v1_p34
+sdcard,CLK,C4,LVCMOS33,2,时钟；MicroSD Pin 4；支持 SPI 与 SD 模式，3.3V 接口,manual1v1_p35
+sdcard,CMD,A4,LVCMOS33,2,命令串行线；MicroSD Pin 3；支持 SPI 与 SD 模式，3.3V 接口,manual1v1_p35
+sdcard,DATA[0],D5,LVCMOS33,2,数据线 D0；MicroSD Pin 7；支持 SPI 与 SD 模式，3.3V 接口,manual1v1_p35
+sdcard,DATA[1],D4,LVCMOS33,2,数据线 D1；MicroSD Pin 8；支持 SPI 与 SD 模式，3.3V 接口,manual1v1_p35
+sdcard,DATA[2],E6,LVCMOS33,2,数据线 D2；MicroSD Pin 1；支持 SPI 与 SD 模式，3.3V 接口,manual1v1_p35
+sdcard,DATA[3],E5,LVCMOS33,2,数据线 D3；MicroSD Pin 2；支持 SPI 与 SD 模式，3.3V 接口,manual1v1_p35
+sdcard,DETECT,G9,LVCMOS33,2,卡识别；MicroSD Pin 9；支持 SPI 与 SD 模式，3.3V 接口,manual1v1_p35
+ext40_j8,GND,-,LVCMOS33,1/2,40pin 扩展口 J8 第 1 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,5V0,+5V,LVCMOS33,1/2,40pin 扩展口 J8 第 2 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_11N,AB13,LVCMOS33,1/2,40pin 扩展口 J8 第 3 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_11P,Y13,LVCMOS33,1/2,40pin 扩展口 J8 第 4 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_9N,AB11,LVCMOS33,1/2,40pin 扩展口 J8 第 5 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_9P,Y11,LVCMOS33,1/2,40pin 扩展口 J8 第 6 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_10N,W11,LVCMOS33,1/2,40pin 扩展口 J8 第 7 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_10P,V11,LVCMOS33,1/2,40pin 扩展口 J8 第 8 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_12N,AB10,LVCMOS33,1/2,40pin 扩展口 J8 第 9 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_12P,AA10,LVCMOS33,1/2,40pin 扩展口 J8 第 10 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_15N,Y10,LVCMOS33,1/2,40pin 扩展口 J8 第 11 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_15P,W10,LVCMOS33,1/2,40pin 扩展口 J8 第 12 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_16N,T11,LVCMOS33,1/2,40pin 扩展口 J8 第 13 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_16P,R11,LVCMOS33,1/2,40pin 扩展口 J8 第 14 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_7N,Y12,LVCMOS33,1/2,40pin 扩展口 J8 第 15 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_7P,W12,LVCMOS33,1/2,40pin 扩展口 J8 第 16 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_8N,U12,LVCMOS33,1/2,40pin 扩展口 J8 第 17 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_8P,T12,LVCMOS33,1/2,40pin 扩展口 J8 第 18 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_14N,U10,LVCMOS33,1/2,40pin 扩展口 J8 第 19 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_14P,T10,LVCMOS33,1/2,40pin 扩展口 J8 第 20 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_13N,AB9,LVCMOS33,1/2,40pin 扩展口 J8 第 21 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_13P,Y9,LVCMOS33,1/2,40pin 扩展口 J8 第 22 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_17N,V9,LVCMOS33,1/2,40pin 扩展口 J8 第 23 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_17P,U9,LVCMOS33,1/2,40pin 扩展口 J8 第 24 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_3N,U8,LVCMOS33,1/2,40pin 扩展口 J8 第 25 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_3P,T8,LVCMOS33,1/2,40pin 扩展口 J8 第 26 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_4N,W8,LVCMOS33,1/2,40pin 扩展口 J8 第 27 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_4P,V7,LVCMOS33,1/2,40pin 扩展口 J8 第 28 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_6N,AB8,LVCMOS33,1/2,40pin 扩展口 J8 第 29 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_6P,AA8,LVCMOS33,1/2,40pin 扩展口 J8 第 30 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_5N,Y6,LVCMOS33,1/2,40pin 扩展口 J8 第 31 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_5P,W6,LVCMOS33,1/2,40pin 扩展口 J8 第 32 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_2N,AB5,LVCMOS33,1/2,40pin 扩展口 J8 第 33 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_2P,Y5,LVCMOS33,1/2,40pin 扩展口 J8 第 34 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_1N,AB4,LVCMOS33,1/2,40pin 扩展口 J8 第 35 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,EX_IO_1P,AA4,LVCMOS33,1/2,40pin 扩展口 J8 第 36 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,GND,-,LVCMOS33,1/2,40pin 扩展口 J8 第 37 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,GND,-,LVCMOS33,1/2,40pin 扩展口 J8 第 38 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,A3V3,+3.3V,,1/2,40pin 扩展口 J8 第 39 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+ext40_j8,A3V3,+3.3V,,1/2,40pin 扩展口 J8 第 40 脚；座内 5V×1 / 3.3V×2 / GND×3 / IO×34。⚠️ 手册警示：外接设备必须经电平转换，切勿直连,manual1v1_p36
+camera,cmos1_pclk,T12,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos1_vsync,U12,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos1_href,AB10,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos1_data[0],V11,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos1_data[1],Y10,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos1_data[2],T11,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos1_data[3],R11,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos1_data[4],W11,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos1_data[5],AB11,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos1_data[6],AA10,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos1_data[7],AB13,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos1_scl,Y11,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos1_sda,Y13,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos1_reset,W10,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos2_pclk,W6,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos2_vsync,Y5,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos2_href,AB5,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos2_data[0],Y6,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos2_data[1],U8,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos2_data[2],T8,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos2_data[3],U9,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos2_data[4],W8,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos2_data[5],AB8,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos2_data[6],Y9,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos2_data[7],AB9,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos2_scl,V9,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos2_sda,T10,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+camera,cmos2_reset,AB4,LVCMOS33,2,官方例程 PCF 中的 OV5640 8bit DVP 接口（**手册未列摄像头接口**，物理连接器待实物核对）；与 40pin 扩展口 J8 的 EX_IO_* 引脚编号高度重叠,pcf
+pmod_j12,D1_N,AB6,LVCMOS33,2,PMOD J12 第 1 脚；BANK2 为 3.3V，外接模块也要 3.3V,manual1v1_p37
+pmod_j12,D1_P,AA6,LVCMOS33,2,PMOD J12 第 2 脚；BANK2 为 3.3V，外接模块也要 3.3V,manual1v1_p37
+pmod_j12,D2_N,AB7,LVCMOS33,2,PMOD J12 第 3 脚；BANK2 为 3.3V，外接模块也要 3.3V,manual1v1_p37
+pmod_j12,D2_P,Y7,LVCMOS33,2,PMOD J12 第 4 脚；BANK2 为 3.3V，外接模块也要 3.3V,manual1v1_p37
+pmod_j12,D3_N,Y8,LVCMOS33,2,PMOD J12 第 5 脚；BANK2 为 3.3V，外接模块也要 3.3V,manual1v1_p37
+pmod_j12,D3_P,W9,LVCMOS33,2,PMOD J12 第 6 脚；BANK2 为 3.3V，外接模块也要 3.3V,manual1v1_p37
+pmod_j12,D4_N,U6,LVCMOS33,2,PMOD J12 第 7 脚；BANK2 为 3.3V，外接模块也要 3.3V,manual1v1_p37
+pmod_j12,D4_P,T7,LVCMOS33,2,PMOD J12 第 8 脚；BANK2 为 3.3V，外接模块也要 3.3V,manual1v1_p37
+pmod_j12,GND,-,LVCMOS33,2,PMOD J12 第 9 脚；BANK2 为 3.3V，外接模块也要 3.3V,manual1v1_p37
+pmod_j12,GND,-,LVCMOS33,2,PMOD J12 第 10 脚；BANK2 为 3.3V，外接模块也要 3.3V,manual1v1_p37
+pmod_j12,A3V3,+3.3V,LVCMOS33,2,PMOD J12 第 11 脚；BANK2 为 3.3V，外接模块也要 3.3V,manual1v1_p37
+pmod_j12,A3V3,+3.3V,LVCMOS33,2,PMOD J12 第 12 脚；BANK2 为 3.3V，外接模块也要 3.3V,manual1v1_p37
+conn_j2,B1_L36_P.W20,W20,LVCMOS33,1,JJ2 Pin1；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L37_P.Y21,Y21,LVCMOS33,1,JJ2 Pin2；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L36_N.W22,W22,LVCMOS33,1,JJ2 Pin3；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L37_N.Y22,Y22,LVCMOS33,1,JJ2 Pin4；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L34_P.U20,U20,LVCMOS33,1,JJ2 Pin5；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L35_P.V21,V21,LVCMOS33,1,JJ2 Pin6；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L34_N.U22,U22,LVCMOS33,1,JJ2 Pin7；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L35_N.V22,V22,LVCMOS33,1,JJ2 Pin8；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,GND(脚9),-,,,JJ2 Pin9；地,manual1v1_p14
+conn_j2,GND(脚10),-,,,JJ2 Pin10；地,manual1v1_p14
+conn_j2,B1_L41_P.U19,U19,LVCMOS33,1,JJ2 Pin11；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L33_P.T21,T21,LVCMOS33,1,JJ2 Pin12；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L41_N.T20,T20,LVCMOS33,1,JJ2 Pin13；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L33_N.T22,T22,LVCMOS33,1,JJ2 Pin14；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L31_P.P21,P21,LVCMOS33,1,JJ2 Pin15；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L32_P.R20,R20,LVCMOS33,1,JJ2 Pin16；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L31_N.P22,P22,LVCMOS33,1,JJ2 Pin17；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L32_N.R22,R22,LVCMOS33,1,JJ2 Pin18；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,GND(脚19),-,,,JJ2 Pin19；地,manual1v1_p14
+conn_j2,GND(脚20),-,,,JJ2 Pin20；地,manual1v1_p14
+conn_j2,B1_L52_P.P17,P17,LVCMOS33,1,JJ2 Pin21；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L38_N.R19,R19,LVCMOS33,1,JJ2 Pin22；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L52_N.P18,P18,LVCMOS33,1,JJ2 Pin23；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L38_P.P19,P19,LVCMOS33,1,JJ2 Pin24；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L25_N.M19,M19,LVCMOS33,1,JJ2 Pin25；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L29_P.M21,M21,LVCMOS33,1,JJ2 Pin26；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L25_P.M20,M20,LVCMOS33,1,JJ2 Pin27；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L29_N.M22,M22,LVCMOS33,1,JJ2 Pin28；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,GND(脚29),-,,,JJ2 Pin29；地,manual1v1_p14
+conn_j2,GND(脚30),-,,,JJ2 Pin30；地,manual1v1_p14
+conn_j2,B1_L30_P.N20,N20,LVCMOS33,1,JJ2 Pin31；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L43_P.M17,M17,LVCMOS33,1,JJ2 Pin32；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L30_N.N22,N22,LVCMOS33,1,JJ2 Pin33；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L43_N.M18,M18,LVCMOS33,1,JJ2 Pin34；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L42_N.P16,P16,LVCMOS33,1,JJ2 Pin35；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L40_P.M16,M16,LVCMOS33,1,JJ2 Pin36；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L42_P.N16,N16,LVCMOS33,1,JJ2 Pin37；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L40_N.N15,N15,LVCMOS33,1,JJ2 Pin38；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L28_P.L20,L20,LVCMOS33,1,JJ2 Pin39；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L23_N.L19,L19,LVCMOS33,1,JJ2 Pin40；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L28_N.L22,L22,LVCMOS33,1,JJ2 Pin41；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L23_P.K20,K20,LVCMOS33,1,JJ2 Pin42；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L19_P.K19,K19,LVCMOS33,1,JJ2 Pin43；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L21_N.L17,L17,LVCMOS33,1,JJ2 Pin44；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L19_N.K18,K18,LVCMOS33,1,JJ2 Pin45；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L21_P.K17,K17,LVCMOS33,1,JJ2 Pin46；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L39_P.L15,L15,LVCMOS33,1,JJ2 Pin47；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_IO_N19.N19,N19,LVCMOS33,1,JJ2 Pin48；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L39_N.K16,K16,LVCMOS33,1,JJ2 Pin49；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L24_N.J22,J22,LVCMOS33,1,JJ2 Pin50；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L11_N.J17,J17,LVCMOS33,1,JJ2 Pin51；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L24_P.J20,J20,LVCMOS33,1,JJ2 Pin52；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L11_P.J16,J16,LVCMOS33,1,JJ2 Pin53；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_IO_K22.K22,K22,LVCMOS33,1,JJ2 Pin54；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L18_P.J19,J19,LVCMOS33,1,JJ2 Pin55；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L22_P.H21,H21,LVCMOS33,1,JJ2 Pin56；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L18_N.H20,H20,LVCMOS33,1,JJ2 Pin57；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L22_N.H22,H22,LVCMOS33,1,JJ2 Pin58；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L1_N.H17,H17,LVCMOS33,1,JJ2 Pin59；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L15_N.H19,H19,LVCMOS33,1,JJ2 Pin60；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L1_P.H16,H16,LVCMOS33,1,JJ2 Pin61；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L15_P.H18,H18,LVCMOS33,1,JJ2 Pin62；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,GND(脚63),-,,,JJ2 Pin63；地,manual1v1_p14
+conn_j2,GND(脚64),-,,,JJ2 Pin64；地,manual1v1_p14
+conn_j2,B1_L14_P.G19,G19,LVCMOS33,1,JJ2 Pin65；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L20_N.G22,G22,LVCMOS33,1,JJ2 Pin66；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L14_N.F20,F20,LVCMOS33,1,JJ2 Pin67；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L20_P.G20,G20,LVCMOS33,1,JJ2 Pin68；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L0_N.F19,F19,LVCMOS33,1,JJ2 Pin69；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L16_N.F22,F22,LVCMOS33,1,JJ2 Pin70；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L0_P.F18,F18,LVCMOS33,1,JJ2 Pin71；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L16_P.F21,F21,LVCMOS33,1,JJ2 Pin72；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L13_N.D22,D22,LVCMOS33,1,JJ2 Pin73；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L17_N.E22,E22,LVCMOS33,1,JJ2 Pin74；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L13_P.D21,D21,LVCMOS33,1,JJ2 Pin75；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L17_P.E20,E20,LVCMOS33,1,JJ2 Pin76；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L2_N.B22,B22,LVCMOS33,1,JJ2 Pin77；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L12_N.C22,C22,LVCMOS33,1,JJ2 Pin78；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L2_P.B21,B21,LVCMOS33,1,JJ2 Pin79；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,B1_L12_P.C20,C20,LVCMOS33,1,JJ2 Pin80；BANK1；电平标准 3.3V,manual1v1_p14
+conn_j2,A5V0(脚1),-,,,JJ2 Pin1；+5V 供电,manual1v1_p14
+conn_j2,A5V0(脚2),-,,,JJ2 Pin2；+5V 供电,manual1v1_p14
+conn_j2,A5V0(脚3),-,,,JJ2 Pin3；+5V 供电,manual1v1_p14
+conn_j2,A5V0(脚4),-,,,JJ2 Pin4；+5V 供电,manual1v1_p14
+conn_j2,A5V0(脚5),-,,,JJ2 Pin5；+5V 供电,manual1v1_p14
+conn_j2,A5V0(脚6),-,,,JJ2 Pin6；+5V 供电,manual1v1_p14
+conn_j2,A5V0(脚7),-,,,JJ2 Pin7；+5V 供电,manual1v1_p14
+conn_j2,A5V0(脚8),-,,,JJ2 Pin8；+5V 供电,manual1v1_p14
+conn_j2,\(脚11),-,,,JJ2 Pin11；地,manual1v1_p14
+conn_j2,GND(脚12),-,,,JJ2 Pin12；地,manual1v1_p14
+conn_j3,GND(脚63),-,,,JJ3 Pin63；地,manual1v1_p15
+conn_j3,GND(脚64),-,,,JJ3 Pin64；地,manual1v1_p15
+conn_j3,A5V0(脚1),-,,,JJ3 Pin1；+5V 供电,manual1v1_p15
+conn_j3,A5V0(脚2),-,,,JJ3 Pin2；+5V 供电,manual1v1_p15
+conn_j3,A5V0(脚3),-,,,JJ3 Pin3；+5V 供电,manual1v1_p15
+conn_j3,A5V0(脚4),-,,,JJ3 Pin4；+5V 供电,manual1v1_p15
+conn_j3,A5V0(脚5),-,,,JJ3 Pin5；+5V 供电,manual1v1_p15
+conn_j3,A5V0(脚6),-,,,JJ3 Pin6；+5V 供电,manual1v1_p15
+conn_j3,A5V0(脚7),-,,,JJ3 Pin7；+5V 供电,manual1v1_p15
+conn_j3,A5V0(脚8),-,,,JJ3 Pin8；+5V 供电,manual1v1_p15
+conn_j3,GND(脚9),-,,,JJ3 Pin9；地,manual1v1_p15
+conn_j3,GND(脚10),-,,,JJ3 Pin10；地,manual1v1_p15
+conn_j3,\(脚11),-,,,JJ3 Pin11；地,manual1v1_p15
+conn_j3,GND(脚12),-,,,JJ3 Pin12；地,manual1v1_p15
+conn_j3,B2_L13_P.U9,U9,LVCMOS33,2,JJ3 Pin13；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L20_P.Y9,Y9,LVCMOS33,2,JJ3 Pin14；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L13_N.V9,V9,LVCMOS33,2,JJ3 Pin15；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L20_N.AB9,AB9,LVCMOS33,2,JJ3 Pin16；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L17_P.T10,T10,LVCMOS33,2,JJ3 Pin17；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L29_P.R11,R11,LVCMOS33,2,JJ3 Pin18；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L17_N.U10,U10,LVCMOS33,2,JJ3 Pin19；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L29_N.T11,T11,LVCMOS33,2,JJ3 Pin20；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,GND(脚21),-,,,JJ3 Pin21；地,manual1v1_p15
+conn_j3,GND(脚22),-,,,JJ3 Pin22；地,manual1v1_p15
+conn_j3,B2_L19_P.W10,W10,LVCMOS33,2,JJ3 Pin23；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L22_P.AA10,AA10,LVCMOS33,2,JJ3 Pin24；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L19_N.Y10,Y10,LVCMOS33,2,JJ3 Pin25；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L22_N.AB10,AB10,LVCMOS33,2,JJ3 Pin26；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L21_P.V11,V11,LVCMOS33,2,JJ3 Pin27；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L24_P.Y11,Y11,LVCMOS33,2,JJ3 Pin28；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L21_N.W11,W11,LVCMOS33,2,JJ3 Pin29；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L24_N.AB11,AB11,LVCMOS33,2,JJ3 Pin30；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,GND(脚31),-,,,JJ3 Pin31；地,manual1v1_p15
+conn_j3,GND(脚32),-,,,JJ3 Pin32；地,manual1v1_p15
+conn_j3,B2_L27_N.U12,U12,LVCMOS33,2,JJ3 Pin33；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L23_N.Y12,Y12,LVCMOS33,2,JJ3 Pin34；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L27_P.T12,T12,LVCMOS33,2,JJ3 Pin35；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L23_P.W12,W12,LVCMOS33,2,JJ3 Pin36；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L25_N.AB12,AB12,LVCMOS33,2,JJ3 Pin37；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L26_N.AB13,AB13,LVCMOS33,2,JJ3 Pin38；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L25_P.AA12,AA12,LVCMOS33,2,JJ3 Pin39；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L26_P.Y13,Y13,LVCMOS33,2,JJ3 Pin40；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,GND(脚41),-,,,JJ3 Pin41；地,manual1v1_p15
+conn_j3,GND(脚42),-,,,JJ3 Pin42；地,manual1v1_p15
+conn_j3,B2_L33_N.W13,W13,LVCMOS33,2,JJ3 Pin43；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L35_N.U13,U13,LVCMOS33,2,JJ3 Pin44；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L33_P.V13,V13,LVCMOS33,2,JJ3 Pin45；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L35_P.U14,U14,LVCMOS33,2,JJ3 Pin46；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L31_N.Y14,Y14,LVCMOS33,2,JJ3 Pin47；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L28_N.U15,U15,LVCMOS33,2,JJ3 Pin48；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L31_P.W14,W14,LVCMOS33,2,JJ3 Pin49；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L28_P.T15,T15,LVCMOS33,2,JJ3 Pin50；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,GND(脚51),-,,,JJ3 Pin51；地,manual1v1_p15
+conn_j3,GND(脚52),-,,,JJ3 Pin52；地,manual1v1_p15
+conn_j3,B2_L45_N.AB14,AB14,LVCMOS33,2,JJ3 Pin53；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L34_N.W15,W15,LVCMOS33,2,JJ3 Pin54；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L45_P.AA14,AA14,LVCMOS33,2,JJ3 Pin55；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L34_P.Y16,Y16,LVCMOS33,2,JJ3 Pin56；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L47_N.V15,V15,LVCMOS33,2,JJ3 Pin57；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L32_N.AB16,AB16,LVCMOS33,2,JJ3 Pin58；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L47_P.U16,U16,LVCMOS33,2,JJ3 Pin59；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L32_P.AA16,AA16,LVCMOS33,2,JJ3 Pin60；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L30_N.AB15,AB15,LVCMOS33,2,JJ3 Pin61；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L36_N.AB17,AB17,LVCMOS33,2,JJ3 Pin62；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L30_P.Y15,Y15,LVCMOS33,2,JJ3 Pin63；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L36_P.Y17,Y17,LVCMOS33,2,JJ3 Pin64；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L46_P.W17,W17,LVCMOS33,2,JJ3 Pin65；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L53_P.V17,V17,LVCMOS33,2,JJ3 Pin66；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L46_N.Y18,Y18,LVCMOS33,2,JJ3 Pin67；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L53_N.W18,W18,LVCMOS33,2,JJ3 Pin68；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L37_N.AB18,AB18,LVCMOS33,2,JJ3 Pin69；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_IO_AB19.AB19,AB19,LVCMOS33,2,JJ3 Pin70；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j3,B2_L37_P.AA18,AA18,LVCMOS33,2,JJ3 Pin71；BANK2；电平标准 3.3V,manual1v1_p15
+conn_j4,(未解析),-,,,JJ4 Pin80；原文片段 `GND扩展接口3:J480Pin的连接器J4用来连接底板的VCCIN电源(+5V` 未能解析成合法信号名,manual1v1_p17
+conn_j4,A5V0(脚1),-,,,JJ4 Pin1；+5V 供电,manual1v1_p17
+conn_j4,A5V0(脚2),-,,,JJ4 Pin2；+5V 供电,manual1v1_p17
+conn_j4,A5V0(脚3),-,,,JJ4 Pin3；+5V 供电,manual1v1_p17
+conn_j4,A5V0(脚4),-,,,JJ4 Pin4；+5V 供电,manual1v1_p17
+conn_j4,A5V0(脚5),-,,,JJ4 Pin5；+5V 供电,manual1v1_p17
+conn_j4,A5V0(脚6),-,,,JJ4 Pin6；+5V 供电,manual1v1_p17
+conn_j4,A5V0(脚7),-,,,JJ4 Pin7；+5V 供电,manual1v1_p17
+conn_j4,A5V0(脚8),-,,,JJ4 Pin8；+5V 供电,manual1v1_p17
+conn_j4,GND(脚9),-,,,JJ4 Pin9；地,manual1v1_p17
+conn_j4,GND(脚10),-,,,JJ4 Pin10；地,manual1v1_p17
+conn_j4,B3_L52_N.AA1,AA1,HSTL15_I,3,JJ4 Pin11；BANK3；电平标准 1.5V,manual1v1_p17
+conn_j4,NC(脚12),-,,,JJ4 Pin12；未连接,manual1v1_p17
+conn_j4,B3_L52_P.AA2,AA2,HSTL15_I,3,JJ4 Pin13；BANK3；电平标准 1.5V,manual1v1_p17
+conn_j4,REST(脚14),-,,,JJ4 Pin14；复位网络 REST（非普通 IO）,manual1v1_p17
+conn_j4,B2_L3_N.AB4,AB4,LVCMOS33,2,JJ4 Pin15；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,B2_L4_N.AB5,AB5,LVCMOS33,2,JJ4 Pin16；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,B2_L3_P.AA4,AA4,LVCMOS33,2,JJ4 Pin17；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,B2_L4_P.Y5,Y5,LVCMOS33,2,JJ4 Pin18；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,GND(脚19),-,,,JJ4 Pin19；地,manual1v1_p17
+conn_j4,GND(脚20),-,,,JJ4 Pin20；地,manual1v1_p17
+conn_j4,B2_L14_N.AB6,AB6,LVCMOS33,2,JJ4 Pin21；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,B2_L5_N.Y6,Y6,LVCMOS33,2,JJ4 Pin22；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,B2_L14_P.AA6,AA6,LVCMOS33,2,JJ4 Pin23；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,B2_L5_P.W6,W6,LVCMOS33,2,JJ4 Pin24；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,B2_L16_N.AB7,AB7,LVCMOS33,2,JJ4 Pin25；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,B2_L18_N.AB8,AB8,LVCMOS33,2,JJ4 Pin26；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,B2_L16_P.Y7,Y7,LVCMOS33,2,JJ4 Pin27；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,B2_L18_P.AA8,AA8,LVCMOS33,2,JJ4 Pin28；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,GND(脚29),-,,,JJ4 Pin29；地,manual1v1_p17
+conn_j4,GND(脚30),-,,,JJ4 Pin30；地,manual1v1_p17
+conn_j4,B2_L15_N.Y8,Y8,LVCMOS33,2,JJ4 Pin31；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,B2_L7_N.W8,W8,LVCMOS33,2,JJ4 Pin32；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,B2_L15_P.W9,W9,LVCMOS33,2,JJ4 Pin33；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,B2_L7_P.V7,V7,LVCMOS33,2,JJ4 Pin34；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,B2_L2_P.T7,T7,LVCMOS33,2,JJ4 Pin35；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,B2_L8_N.U8,U8,LVCMOS33,2,JJ4 Pin36；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,B2_L2_N.U6,U6,LVCMOS33,2,JJ4 Pin37；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,B2_L8_P.T8,T8,LVCMOS33,2,JJ4 Pin38；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,GND(脚39),-,,,JJ4 Pin39；地,manual1v1_p17
+conn_j4,GND(脚40),-,,,JJ4 Pin40；地,manual1v1_p17
+conn_j4,B2_L6_N.R8,R8,LVCMOS33,2,JJ4 Pin41；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,B3_IO_R3.R3,R3,HSTL15_I,3,JJ4 Pin42；BANK3；电平标准 1.5V,manual1v1_p17
+conn_j4,B2_L6_P.R9,R9,LVCMOS33,2,JJ4 Pin43；BANK2；电平标准 3.3V,manual1v1_p17
+conn_j4,B3_IO_M5.M5,M5,HSTL15_I,3,JJ4 Pin44；BANK3；电平标准 1.5V,manual1v1_p17
+conn_j4,GND(脚45),-,,,JJ4 Pin45；地,manual1v1_p17
+conn_j4,GND(脚46),-,,,JJ4 Pin46；地,manual1v1_p17
+conn_j4,NC(脚47),-,,,JJ4 Pin47；未连接,manual1v1_p17
+conn_j4,NC(脚48),-,,,JJ4 Pin48；未连接,manual1v1_p17
+conn_j4,GND(脚49),-,,,JJ4 Pin49；地,manual1v1_p17
+conn_j4,GND(脚50),-,,,JJ4 Pin50；地,manual1v1_p17
+conn_j4,NC(脚51),-,,,JJ4 Pin51；未连接,manual1v1_p17
+conn_j4,NC(脚52),-,,,JJ4 Pin52；未连接,manual1v1_p17
+conn_j4,GND(脚53),-,,,JJ4 Pin53；地,manual1v1_p17
+conn_j4,GND(脚54),-,,,JJ4 Pin54；地,manual1v1_p17
+conn_j4,NC(脚55),-,,,JJ4 Pin55；未连接,manual1v1_p17
+conn_j4,NC(脚56),-,,,JJ4 Pin56；未连接,manual1v1_p17
+conn_j4,NC(脚57),-,,,JJ4 Pin57；未连接,manual1v1_p17
+conn_j4,NC(脚58),-,,,JJ4 Pin58；未连接,manual1v1_p17
+conn_j4,GND(脚59),-,,,JJ4 Pin59；地,manual1v1_p17
+conn_j4,GND(脚60),-,,,JJ4 Pin60；地,manual1v1_p17
+conn_j4,NC(脚61),-,,,JJ4 Pin61；未连接,manual1v1_p17
+conn_j4,NC(脚62),-,,,JJ4 Pin62；未连接,manual1v1_p17
+conn_j4,NC(脚63),-,,,JJ4 Pin63；未连接,manual1v1_p17
+conn_j4,NC(脚64),-,,,JJ4 Pin64；未连接,manual1v1_p17
+conn_j4,GND(脚65),-,,,JJ4 Pin65；地,manual1v1_p17
+conn_j4,GND(脚66),-,,,JJ4 Pin66；地,manual1v1_p17
+conn_j4,NC(脚67),-,,,JJ4 Pin67；未连接,manual1v1_p17
+conn_j4,NC(脚68),-,,,JJ4 Pin68；未连接,manual1v1_p17
+conn_j4,GND(脚69),-,,,JJ4 Pin69；地,manual1v1_p17
+conn_j4,GND(脚70),-,,,JJ4 Pin70；地,manual1v1_p17
+conn_j4,NC(脚71),-,,,JJ4 Pin71；未连接,manual1v1_p17
+conn_j4,B3_L19_N.H1,H1,HSTL15_I,3,JJ4 Pin72；BANK3；电平标准 1.5V,manual1v1_p17
+conn_j4,B3_IO_B1.B1,B1,HSTL15_I,3,JJ4 Pin73；BANK3；电平标准 1.5V,manual1v1_p17
+conn_j4,B3_L19_P.H2,H2,HSTL15_I,3,JJ4 Pin74；BANK3；电平标准 1.5V,manual1v1_p17
+conn_j4,B3_L39_N.G4,G4,HSTL15_I,3,JJ4 Pin75；BANK3；电平标准 1.5V,manual1v1_p17
+conn_j4,B3_L20_P.K6,K6,HSTL15_I,3,JJ4 Pin76；BANK3；电平标准 1.5V,manual1v1_p17
+conn_j4,B3_L39_P.H4,H4,HSTL15_I,3,JJ4 Pin77；BANK3；电平标准 1.5V,manual1v1_p17
+conn_j4,B3_L20_N.K5,K5,HSTL15_I,3,JJ4 Pin78；BANK3；电平标准 1.5V,manual1v1_p17
+conn_j4,GND(脚79),-,,,JJ4 Pin79；地,manual1v1_p17
+conn_j4,GND(脚80),-,,,JJ4 Pin80；地,manual1v1_p17
+conn_j5,GND(脚45),-,,,JJ5 Pin45；地,manual1v1_p18
+conn_j5,GND(脚46),-,,,JJ5 Pin46；地,manual1v1_p18
+conn_j5,NC(脚47),-,,,JJ5 Pin47；未连接,manual1v1_p18
+conn_j5,NC(脚48),-,,,JJ5 Pin48；未连接,manual1v1_p18
+conn_j5,GND(脚49),-,,,JJ5 Pin49；地,manual1v1_p18
+conn_j5,GND(脚50),-,,,JJ5 Pin50；地,manual1v1_p18
+conn_j5,NC(脚51),-,,,JJ5 Pin51；未连接,manual1v1_p18
+conn_j5,NC(脚52),-,,,JJ5 Pin52；未连接,manual1v1_p18
+conn_j5,GND(脚53),-,,,JJ5 Pin53；地,manual1v1_p18
+conn_j5,GND(脚54),-,,,JJ5 Pin54；地,manual1v1_p18
+conn_j5,NC(脚55),-,,,JJ5 Pin55；未连接,manual1v1_p18
+conn_j5,NC(脚56),-,,,JJ5 Pin56；未连接,manual1v1_p18
+conn_j5,NC(脚57),-,,,JJ5 Pin57；未连接,manual1v1_p18
+conn_j5,NC(脚58),-,,,JJ5 Pin58；未连接,manual1v1_p18
+conn_j5,GND(脚59),-,,,JJ5 Pin59；地,manual1v1_p18
+conn_j5,GND(脚60),-,,,JJ5 Pin60；地,manual1v1_p18
+conn_j5,NC(脚61),-,,,JJ5 Pin61；未连接,manual1v1_p18
+conn_j5,NC(脚62),-,,,JJ5 Pin62；未连接,manual1v1_p18
+conn_j5,NC(脚63),-,,,JJ5 Pin63；未连接,manual1v1_p18
+conn_j5,NC(脚64),-,,,JJ5 Pin64；未连接,manual1v1_p18
+conn_j5,GND(脚65),-,,,JJ5 Pin65；地,manual1v1_p18
+conn_j5,GND(脚66),-,,,JJ5 Pin66；地,manual1v1_p18
+conn_j5,NC(脚67),-,,,JJ5 Pin67；未连接,manual1v1_p18
+conn_j5,NC(脚68),-,,,JJ5 Pin68；未连接,manual1v1_p18
+conn_j5,GND(脚69),-,,,JJ5 Pin69；地,manual1v1_p18
+conn_j5,GND(脚70),-,,,JJ5 Pin70；地,manual1v1_p18
+conn_j5,NC(脚71),-,,,JJ5 Pin71；未连接,manual1v1_p18
+conn_j5,GND(脚79),-,,,JJ5 Pin79；地,manual1v1_p18
+conn_j5,GND(脚80),-,,,JJ5 Pin80；地,manual1v1_p18
+conn_j5,B0_L1_P.D4,D4,LVCMOS33,0,JJ5 Pin1；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L2_P.B2,B2,LVCMOS33,0,JJ5 Pin2；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L1_N.D5,D5,LVCMOS33,0,JJ5 Pin3；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L2_N.A2,A2,LVCMOS33,0,JJ5 Pin4；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L6_P.C4,C4,LVCMOS33,0,JJ5 Pin5；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L4_P.B3,B3,LVCMOS33,0,JJ5 Pin6；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L6_N.A4,A4,LVCMOS33,0,JJ5 Pin7；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L4_N.A3,A3,LVCMOS33,0,JJ5 Pin8；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L3_P.E5,E5,LVCMOS33,0,JJ5 Pin9；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L9_P.C5,C5,LVCMOS33,0,JJ5 Pin10；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L3_N.E6,E6,LVCMOS33,0,JJ5 Pin11；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L9_N.A5,A5,LVCMOS33,0,JJ5 Pin12；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,GND(脚13),-,,,JJ5 Pin13；地,manual1v1_p18
+conn_j5,GND(脚14),-,,,JJ5 Pin14；地,manual1v1_p18
+conn_j5,MGT_TX0_P.B6,B6,差分,HSST,JJ5 Pin15；BANKHSST；HSST 高速差分对,manual1v1_p18
+conn_j5,MGT_RX0_P.D7,D7,差分,HSST,JJ5 Pin16；BANKHSST；HSST 高速差分对,manual1v1_p18
+conn_j5,MGT_TX0_N.A6,A6,差分,HSST,JJ5 Pin17；BANKHSST；HSST 高速差分对,manual1v1_p18
+conn_j5,MGT_RX0_N.C7,C7,差分,HSST,JJ5 Pin18；BANKHSST；HSST 高速差分对,manual1v1_p18
+conn_j5,GND(脚19),-,,,JJ5 Pin19；地,manual1v1_p18
+conn_j5,GND(脚20),-,,,JJ5 Pin20；地,manual1v1_p18
+conn_j5,MGT_TX1_P.B8,B8,差分,HSST,JJ5 Pin21；BANKHSST；HSST 高速差分对,manual1v1_p18
+conn_j5,MGT_RX1_P.D9,D9,差分,HSST,JJ5 Pin22；BANKHSST；HSST 高速差分对,manual1v1_p18
+conn_j5,MGT_TX1_N.A8,A8,差分,HSST,JJ5 Pin23；BANKHSST；HSST 高速差分对,manual1v1_p18
+conn_j5,MGT_RX1_N.C9,C9,差分,HSST,JJ5 Pin24；BANKHSST；HSST 高速差分对,manual1v1_p18
+conn_j5,GND(脚25),-,,,JJ5 Pin25；地,manual1v1_p18
+conn_j5,GND(脚26),-,,,JJ5 Pin26；地,manual1v1_p18
+conn_j5,MGT_CLK_P.A12,A12,差分,HSST,JJ5 Pin27；BANKHSST；HSST 高速差分对,manual1v1_p18
+conn_j5,MGT_TX2_N.A14,A14,差分,HSST,JJ5 Pin28；BANKHSST；HSST 高速差分对,manual1v1_p18
+conn_j5,MGT_CLK_N.B12,B12,差分,HSST,JJ5 Pin29；BANKHSST；HSST 高速差分对,manual1v1_p18
+conn_j5,MGT_TX2_P.B14,B14,差分,HSST,JJ5 Pin30；BANKHSST；HSST 高速差分对,manual1v1_p18
+conn_j5,GND(脚31),-,,,JJ5 Pin31；地,manual1v1_p18
+conn_j5,GND(脚32),-,,,JJ5 Pin32；地,manual1v1_p18
+conn_j5,MGT_RX2_N.C13,C13,差分,HSST,JJ5 Pin33；BANKHSST；HSST 高速差分对,manual1v1_p18
+conn_j5,MGT_TX3_N.A16,A16,差分,HSST,JJ5 Pin34；BANKHSST；HSST 高速差分对,manual1v1_p18
+conn_j5,MGT_RX2_P.D13,D13,差分,HSST,JJ5 Pin35；BANKHSST；HSST 高速差分对,manual1v1_p18
+conn_j5,MGT_TX3_P.B16,B16,差分,HSST,JJ5 Pin36；BANKHSST；HSST 高速差分对,manual1v1_p18
+conn_j5,GND(脚37),-,,,JJ5 Pin37；地,manual1v1_p18
+conn_j5,GND(脚38),-,,,JJ5 Pin38；地,manual1v1_p18
+conn_j5,MGT_RX3_N.C15,C15,差分,HSST,JJ5 Pin39；BANKHSST；HSST 高速差分对,manual1v1_p18
+conn_j5,B0_L7_P.F7,F7,LVCMOS33,0,JJ5 Pin40；BANK0；电平标准 差分,manual1v1_p18
+conn_j5,MGT_RX3_P.D15,D15,差分,HSST,JJ5 Pin41；BANKHSST；HSST 高速差分对,manual1v1_p18
+conn_j5,B0_L7_N.F8,F8,LVCMOS33,0,JJ5 Pin42；BANK0；电平标准 差分,manual1v1_p18
+conn_j5,GND(脚43),-,,,JJ5 Pin43；地,manual1v1_p18
+conn_j5,GND(脚44),-,,,JJ5 Pin44；地,manual1v1_p18
+conn_j5,B0_L10_P.G8,G8,LVCMOS33,0,JJ5 Pin45；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L13_P.G9,G9,LVCMOS33,0,JJ5 Pin46；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L10_N.F9,F9,LVCMOS33,0,JJ5 Pin47；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L13_N.F10,F10,LVCMOS33,0,JJ5 Pin48；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L11_P.H10,H10,LVCMOS33,0,JJ5 Pin49；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L14_N.G11,G11,LVCMOS33,0,JJ5 Pin50；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L11_N.H11,H11,LVCMOS33,0,JJ5 Pin51；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L14_P.H12,H12,LVCMOS33,0,JJ5 Pin52；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L17_N.G13,G13,LVCMOS33,0,JJ5 Pin53；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L23_P.H14,H14,LVCMOS33,0,JJ5 Pin54；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L17_P.H13,H13,LVCMOS33,0,JJ5 Pin55；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L23_N.G15,G15,LVCMOS33,0,JJ5 Pin56；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L15_P.F14,F14,LVCMOS33,0,JJ5 Pin57；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L16_P.E16,E16,LVCMOS33,0,JJ5 Pin58；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L15_N.F15,F15,LVCMOS33,0,JJ5 Pin59；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L16_N.F16,F16,LVCMOS33,0,JJ5 Pin60；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,GND(脚61),-,,,JJ5 Pin61；地,manual1v1_p18
+conn_j5,GND(脚62),-,,,JJ5 Pin62；地,manual1v1_p18
+conn_j5,B0_L25_P.G16,G16,LVCMOS33,0,JJ5 Pin63；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L24_N.A17,A17,LVCMOS33,0,JJ5 Pin64；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L25_N.F17,F17,LVCMOS33,0,JJ5 Pin65；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L24_P.C17,C17,LVCMOS33,0,JJ5 Pin66；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L30_P.D17,D17,LVCMOS33,0,JJ5 Pin67；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L26_P.D18,D18,LVCMOS33,0,JJ5 Pin68；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L30_N.C18,C18,LVCMOS33,0,JJ5 Pin69；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L26_N.D19,D19,LVCMOS33,0,JJ5 Pin70；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L27_N.A18,A18,LVCMOS33,0,JJ5 Pin71；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L28_N.A19,A19,LVCMOS33,0,JJ5 Pin72；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L27_P.B18,B18,LVCMOS33,0,JJ5 Pin73；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L28_P.C19,C19,LVCMOS33,0,JJ5 Pin74；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L29_P.B20,B20,LVCMOS33,0,JJ5 Pin75；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,B0_L29_N.A20,A20,LVCMOS33,0,JJ5 Pin76；BANK0；电平标准 3.3V,manual1v1_p18
+conn_j5,TDI.E18,E18,,0,JJ5 Pin77；JTAG TDI（BANK0，3.3V）,manual1v1_p18
+conn_j5,TCK.A21,A21,,0,JJ5 Pin78；JTAG TCK（BANK0，3.3V）,manual1v1_p18
+conn_j5,TMS.D20,D20,,0,JJ5 Pin79；JTAG TMS（BANK0，3.3V）,manual1v1_p18
+conn_j5,TDO.G17,G17,,0,JJ5 Pin80；JTAG TDO（BANK0，3.3V）,manual1v1_p18

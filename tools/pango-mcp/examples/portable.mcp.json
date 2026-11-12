@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "pango": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["C:/path/to/pango-mcp/src/index.mjs"],
+      "env": {
+        "PANGO_MCP_PDS_2025": "C:/path/to/PDS/bin/pds_shell.exe",
+        "PANGO_LICENSE_FILE": "C:/path/to/PDS/license.lic",
+        "PANGO_MCP_MODELSIM_HOME": "C:/path/to/ModelSim/win64",
+        "PANGO_MCP_MODELSIM_LICENSE": "C:/path/to/ModelSim/license.dat"
+      }
+    }
+  }
+}

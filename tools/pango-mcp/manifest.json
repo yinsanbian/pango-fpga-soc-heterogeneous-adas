@@ -1,0 +1,57 @@
+{
+  "manifest_version": "0.3",
+  "name": "pango-mcp-local",
+  "display_name": "Pango MCP Local",
+  "version": "0.1.0",
+  "description": "Local Pango Design Suite and ModelSim tools for FPGA workflows.",
+  "long_description": "An independent local MCP implementation based on the published pango-mcp documentation. It exposes PDS project/build/report tools, ModelSim compile/simulation tools, local documentation search, and offline configuration-file generation. PDS and ModelSim installations, licenses, and board profiles are supplied by the user. Device programming, FT2232 JTAG, ILA capture, remote hosts, and the original knowledge vault are not included.",
+  "author": {
+    "name": "Local reconstruction"
+  },
+  "documentation": "https://glama.ai/mcp/servers/Renkos1/pango-mcp/schema",
+  "compatibility": {
+    "runtimes": {
+      "node": ">=18.17"
+    }
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "src/index.mjs",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/src/index.mjs"],
+      "env": {
+        "PANGO_MCP_PDS_2025": "${user_config.pds_shell}",
+        "PANGO_LICENSE_FILE": "${user_config.pds_license}",
+        "PANGO_MCP_MODELSIM_HOME": "${user_config.modelsim_home}",
+        "PANGO_MCP_MODELSIM_LICENSE": "${user_config.modelsim_license}"
+      }
+    }
+  },
+  "user_config": {
+    "pds_shell": {
+      "type": "file",
+      "title": "PDS pds_shell.exe",
+      "description": "Select the Pango Design Suite pds_shell.exe. The MCP server derives the bin directory from this file.",
+      "required": true
+    },
+    "pds_license": {
+      "type": "file",
+      "title": "PDS license file",
+      "description": "Optional path to the PDS license file. The license contents are not included in the bundle.",
+      "required": true
+    },
+    "modelsim_home": {
+      "type": "directory",
+      "title": "ModelSim bin directory",
+      "description": "Select the directory containing vsim.exe, vlog.exe, and related executables.",
+      "required": true
+    },
+    "modelsim_license": {
+      "type": "file",
+      "title": "ModelSim license file",
+      "description": "Optional path to the ModelSim license file; required for licensed compile/simulation runs.",
+      "required": true
+    }
+  }
+}

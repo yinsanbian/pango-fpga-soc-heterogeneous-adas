@@ -1,0 +1,6 @@
+signal,pin,bank,iostandard,drive,slew,direction,note
+sys_clk,P20,1,LVCMOS33,8,FAST,INPUT,板载50MHz
+led5,C5,0,LVCMOS33,2,SLOW,OUTPUT,
+mem_dq0,U1,3,,8,FAST,INOUT,DDR3由BANK3强制HSTL15_I
+mem_ck,T6,3,,8,FAST,OUTPUT,DDR差分时钟
+cmos1_scl,Y11,2,LVCMOS33,8,SLOW,INOUT,OV5640 I2C时钟

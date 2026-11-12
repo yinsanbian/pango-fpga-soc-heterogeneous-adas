@@ -1,0 +1,179 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+csv2pcf.py — 把引脚清单转成 PDS 可用的 .pcf（引脚锁定文件）
+
+输入二选一：
+  1) 引脚库 CSV：`domain,signal,package_pin,io_standard,bank,note,source`
+  2) 精简 CSV：  `signal,pin[,iostandard[,drive[,slew[,direction]]]]`
+     （表头任意大小写，常用别名见 HEADER_ALIAS）
+
+用法：
+  python csv2pcf.py pins.csv -o my_top.pcf
+  python csv2pcf.py pins.csv -o my_top.pcf --bank-io 3.3=LVCMOS33 1.5=HSTL15_I --default-io LVCMOS33
+  python csv2pcf.py pins.csv --check-only          # 只做体检，不写文件
+
+体检项：
+  · 引脚号格式是否合法（字母+数字，如 P20 / AB13 / A1）
+  · 同一引脚是否被两个信号占用
+  · 是否缺 IOSTANDARD（缺则用 --default-io 补，并在注释里标 TODO）
+  · 是否缺 DRIVE / SLEW（按 --drive/--slew 兜底）
+
+⚠️ 生成的 PCF 是**建议值**，务必用 PDS 器件视图或官方例程 PCF 复核后再上板。
+"""
+import argparse
+import csv
+import os
+import re
+import sys
+
+PIN_RE = re.compile(r"^[A-Za-z]{1,2}\d{1,3}$")
+
+HEADER_ALIAS = {
+    "signal": {"signal", "sig", "name", "port", "信号", "信号名", "网络名", "network"},
+    "package_pin": {"package_pin", "pin", "loc", "location", "引脚", "管脚", "pgl50h_pin", "pgl50h管脚"},
+    "io_standard": {"io_standard", "iostandard", "standard", "电平", "电平标准", "io"},
+    "bank": {"bank", "vccio"},
+    "drive": {"drive", "驱动"},
+    "slew": {"slew", "压摆率"},
+    "direction": {"direction", "dir", "方向"},
+    "note": {"note", "备注", "remark"},
+    "domain": {"domain", "外设", "域"},
+}
+
+# 常见 BANK -> 默认电平（盘古50K）
+BANK_DEFAULT_IO = {
+    "0": "LVCMOS33", "1": "LVCMOS33", "2": "LVCMOS33", "3": "HSTL15_I",
+}
+DEFAULT_VCCIO = {"0": "3.3", "1": "3.3", "2": "3.3", "3": "1.5"}
+
+
+def canon_header(h):
+    h = (h or "").strip().lower().replace(" ", "").replace("_", "")
+    for k, alts in HEADER_ALIAS.items():
+        if h in {a.lower().replace("_", "") for a in alts}:
+            return k
+    return h
+
+
+def load_rows(path):
+    with open(path, "r", encoding="utf-8-sig", newline="") as f:
+        rd = csv.reader(f)
+        raw = [r for r in rd if any((c or "").strip() for c in r)]
+    if not raw:
+        sys.exit("空文件：%s" % path)
+    head = [canon_header(c) for c in raw[0]]
+    has_header = "signal" in head and "package_pin" in head
+    if not has_header:
+        # 无表头：按位置猜
+        head = ["signal", "package_pin", "io_standard", "drive", "slew", "direction"][:max(len(raw[0]), 2)]
+        rows = raw
+    else:
+        rows = raw[1:]
+    out = []
+    for r in rows:
+        d = {head[i]: (r[i].strip() if i < len(r) else "") for i in range(len(head))}
+        if d.get("signal"):
+            out.append(d)
+    return out
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("csv")
+    ap.add_argument("-o", "--out", help="输出 .pcf 路径")
+    ap.add_argument("--default-io", default=None, help="缺电平时的兜底 IOSTANDARD")
+    ap.add_argument("--bank-io", nargs="*", default=[], metavar="BANK=STD",
+                    help="按 BANK 指定电平，如 --bank-io 3=1.5=HSTL15_I 写法见文档；一般不需要")
+    ap.add_argument("--drive", default="8", help="默认 DRIVE（默认 8）")
+    ap.add_argument("--slew", default="FAST", help="默认 SLEW（FAST/SLOW，默认 FAST）")
+    ap.add_argument("--check-only", action="store_true", help="只体检不写文件")
+    a = ap.parse_args()
+
+    rows = load_rows(a.csv)
+    if not rows:
+        sys.exit("没有解析到任何引脚行")
+
+    problems = []
+    seen = {}
+    entries = []
+    for d in rows:
+        sig = d["signal"]
+        pin = re.sub(r"\s+", "", d.get("package_pin", ""))
+        if not pin or not PIN_RE.match(pin):
+            problems.append("❌ 引脚号非法/缺失：%s -> %r" % (sig, d.get("package_pin", "")))
+            continue
+        pin = pin.upper()
+        if pin in seen and seen[pin] != sig:
+            problems.append("⚠️ 引脚重复占用：%s 同时给了 %s 和 %s" % (pin, seen[pin], sig))
+        seen[pin] = sig
+
+        std = (d.get("io_standard") or "").strip()
+        bank = (d.get("bank") or "").strip()
+        vccio = ""
+        if not std:
+            std = a.default_io or BANK_DEFAULT_IO.get(bank, "")
+            if std:
+                if bank:
+                    problems.append("ℹ️ %s 缺 IOSTANDARD，按 BANK%s 兜底为 %s" % (sig, bank, std))
+                else:
+                    problems.append("ℹ️ %s 缺 IOSTANDARD 且未给 BANK，按 3.3V 兜底为 %s"
+                                    "（BANK3/DDR3 必须显式写 HSTL15_I）" % (sig, std))
+            else:
+                problems.append("❌ %s 缺 IOSTANDARD 且无法推断，请在 CSV 补 io_standard 列" % sig)
+                continue
+        if not vccio:
+            vccio = DEFAULT_VCCIO.get(bank, "3.3" if std.startswith("LVCMOS3") else "")
+        if std.startswith("HSTL"):
+            vccio = "1.5"
+        drive = (d.get("drive") or a.drive).strip()
+        slew = ((d.get("slew") or a.slew).strip() or a.slew).upper()
+        direction = (d.get("direction") or "").strip().upper()
+
+        entries.append((sig, pin, vccio, std, drive, slew, direction, d.get("note", "")))
+
+    # 体检输出
+    print("解析到 %d 个引脚，%d 项提示：" % (len(entries), len(problems)))
+    for p in problems:
+        print("  " + p)
+    fatal = [p for p in problems if p.startswith("❌")]
+    if fatal:
+        print("\n存在致命问题（引脚非法/电平缺失），已中止写出。")
+        return 1
+
+    lines = [
+        "# Generated by csv2pcf.py — 盘古50K(MES50HP/PGL50H-6IFBG484)",
+        "# 源文件: %s" % os.path.basename(a.csv),
+        "# ⚠️ 建议值，务必用 PDS 器件视图/官方例程 PCF 复核后再上板。",
+        "",
+    ]
+    for sig, pin, vccio, std, drive, slew, direction, note in entries:
+        parts = ["def_port {%s}" % sig, "LOC=%s" % pin]
+        if vccio:
+            parts.append("VCCIO=%s" % vccio)
+        parts.append("IOSTANDARD=%s" % std)
+        if direction in ("INPUT", "OUTPUT", "INOUT"):
+            parts.append("DIRECTION=%s" % direction)
+        if not std.startswith("HSTL"):
+            parts.append("DRIVE=%s" % drive)
+            parts.append("SLEW=%s" % slew)
+            parts.append("NONE=TRUE")
+        line = " ".join(parts)
+        if note:
+            line += "   # %s" % note.replace("\n", " ")
+        lines.append(line)
+
+    text = "\n".join(lines) + "\n"
+    if a.check_only:
+        print("\n--check-only：未写出文件。预览：\n" + text[:800])
+        return 0
+
+    out = a.out or (os.path.splitext(a.csv)[0] + ".pcf")
+    with open(out, "w", encoding="utf-8", newline="\n") as f:
+        f.write(text)
+    print("\n已写出：%s（%d 行 def_port）" % (os.path.abspath(out), len(entries)))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

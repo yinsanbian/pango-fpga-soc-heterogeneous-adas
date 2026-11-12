@@ -1,0 +1,16 @@
+metric,value,unit,note
+board_pre_ms,2.0,ms,typical board log sample
+board_infer_ms,44.0,ms,typical board log sample
+board_post_ms,9.5,ms,typical board log sample
+board_total_ms,55.5,ms,typical board log sample
+fps_budget_15,66.7,ms,1000/15
+board_fps,15.00,fps,1852 frames / 123.48 s
+board_fps_max,16.16,fps,120 frames full speed
+pc_fps_quad,13.95,fps,229 frames incl 1 s delay
+pc_render_p50,16.97,ms,229 frames queued run
+pc_render_p95,18.46,ms,229 frames queued run
+pc_render_max,50.39,ms,229 frames queued run
+pc_lane_ms,23.33,ms,last frame 229-frame run
+pc_matched_quad,229,frames,229 total
+pc_matched_single,1852,frames,1852 total
+quad_compose_ms,17.5,ms,isolated 1600x900 four-file composition
