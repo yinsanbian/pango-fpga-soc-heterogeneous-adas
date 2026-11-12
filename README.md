@@ -1,6 +1,6 @@
-# 夜瞳异构（NightEye Heterogeneous）— 开源快照 2026-11-03
+# 紫光 FPGA + SoC 异构 ADAS（Pango FPGA + SoC Heterogeneous ADAS）— 开源快照 2026-11-03
 
-双 FPGA + RK3568 协同的边缘视觉感知平台。三个节点各司其职：
+紫光同创双 FPGA（PGL50H + PG2L100H）+ Rockchip RK3568 SoC 协同的异构 ADAS 边缘视觉感知平台。三个节点各司其职：
 
 | 节点 | 器件 | 职责 |
 |---|---|---|
